@@ -22,11 +22,18 @@ export default {
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
+          glow: "hsl(var(--primary-glow))",
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
           foreground: "hsl(var(--secondary-foreground))",
         },
+        "forest-green": "hsl(var(--forest-green))",
+        "ocean-blue": "hsl(var(--ocean-blue))",
+        "ocean-light": "hsl(var(--ocean-light))",
+        "nature-green": "hsl(var(--nature-green))",
+        "earth-brown": "hsl(var(--earth-brown))",
+        "sky-blue": "hsl(var(--sky-blue))",
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
           foreground: "hsl(var(--destructive-foreground))",
@@ -80,10 +87,48 @@ export default {
             height: "0",
           },
         },
+        "float": {
+          "0%, 100%": { transform: "translateY(0px)" },
+          "50%": { transform: "translateY(-10px)" }
+        },
+        "wave": {
+          "0%": { transform: "rotate(0deg)" },
+          "10%": { transform: "rotate(14deg)" },
+          "20%": { transform: "rotate(-8deg)" },
+          "30%": { transform: "rotate(14deg)" },
+          "40%": { transform: "rotate(-4deg)" },
+          "50%": { transform: "rotate(10deg)" },
+          "60%": { transform: "rotate(0deg)" },
+          "100%": { transform: "rotate(0deg)" }
+        },
+        "eco-pulse": {
+          "0%, 100%": { 
+            transform: "scale(1)",
+            boxShadow: "0 0 0 0 rgba(34, 197, 94, 0.4)"
+          },
+          "50%": { 
+            transform: "scale(1.05)",
+            boxShadow: "0 0 0 10px rgba(34, 197, 94, 0)"
+          }
+        },
+        "fade-in-up": {
+          "0%": {
+            opacity: "0",
+            transform: "translateY(20px)"
+          },
+          "100%": {
+            opacity: "1",
+            transform: "translateY(0)"
+          }
+        }
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "float": "float 3s ease-in-out infinite",
+        "wave": "wave 2s ease-in-out",
+        "eco-pulse": "eco-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite",
+        "fade-in-up": "fade-in-up 0.6s ease-out",
       },
     },
   },
